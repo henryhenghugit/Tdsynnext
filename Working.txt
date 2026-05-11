@@ -1,0 +1,136 @@
+search in outlook: US DATA SYNC REPORT FROM FCA to AS
+Dxi-3par857!Dxi-3par857!
+
+password for U818041V/X5s)-47Q.b?89h10w{51K5@45
+Dxi-3par857!Dxi-3par857!
+sa_admin/Dxi-3par857!Dxi-3par857!
+fca-vm-gis-uat4db2-master
+
+chage -d $(date +%Y-%m-%d) -M 180 MySQL
+chage -d today  -M 90 MySQL
+
+
+
+
+59.98:2233
+10.224.57.22
+ip 
+
+ansible
+sa_admin： 
+
+ansible-playbook -i tmp.list -k  allsync.yaml -f 15
+
+Quantum
+UK DXI https://10.44.80.20/
+GON NEW DXi4800 ： https://10.93.136.53/ 
+ASH DXI https://ash-dxi9000.tdsnx.tdsynnex.com/ - 172.18.78.21/22
+GSC https://10.84.126.40/
+Telford  http://10.44.80.56/ 
+FCA-DXI https://10.88.127.51/
+admin
+
+systemctl status autofs.service
+[root@fca-vm-prod-crm8 mnt]# systemctl enable --now  autofs.service
+systemctl: option '--no' is ambiguous; possibilities: '--no-block' '--no-legend' '--no-pager' '--no-wall' '--no-warn' '--no-reload' '--no-ask-password' '--now'
+
+[root@fca-vm-prod-crm8 mnt]# cd ..
+[root@fca-vm-prod-crm8 /]# ls -al /net/10.88.127.52.
+ls: cannot access '/net/10.88.127.52.': No such file or directory
+[root@fca-vm-prod-crm8 /]# ls -al /net/10.88.127.52/
+total 0
+drwxr-xr-x 3 root root 0 Apr 30 10:47 .
+drwxr-xr-x 3 root root 0 Apr 30 10:47 ..
+drwxr-xr-x 3 root root 0 Apr 30 10:47 Q
+[root@fca-vm-prod-crm8 /]#
+[root@fca-vm-prod-crm8 /]#
+[root@fca-vm-prod-crm8 /]#
+[root@fca-vm-prod-crm8 /]# ln -s /net/10.88.127.52/Q/shares/FCA2ASH /mnt/backup
+
+
+
+--printer
+
+1> find the excel file 
+   locate each printer driver in 
+more /root/ansible/printer/printer.yml.example
+---
+printer:
+  - Printer : SWDNJ-503L14PP
+    Driver : openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS410_Series.ppd
+  - Printer : SWDNJ-503P12PP
+    Driver : openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS810_Series.ppd
+  - Printer : SWDNJ-503P27PP
+    Driver : openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS810_Series.ppd
+  - Printer ：USCHC-12P06PP
+    Driver : openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MX520_Series.ppd
+  - Printer: MSON-80L37PP
+    Driver : openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS820_Series.ppd
+  - Printer : SWDNJ-503I27LP
+    Driver : drv:///sample.drv/zebra.ppd  #更精确：drv:///zebra/zebra-zpl.ppd
+  - Printer : 503P39PP                            #Lexmark MS 531dw
+    Driver : Lexmark_PPD/Lexmark_UPD_Series.ppd   #通用驱动
+  - Printer:
+    Driver : openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS520_Series.ppd #比MS420_Series 更新也适合Lexmark MS531
+
+    Driver: openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS420_Series.ppd
+
+
+2> Grab the Driver:........... .ppd.
+
+3> update the driver in excel file with .ppd driver.
+
+
+4> more /tmp/printer.list
+SBIN-504P80LP   drv:///sample.drv/zebra.ppd
+SBIN-504P80RLP  drv:///sample.drv/zebra.ppd
+SBIN-504P80PP   openprinting-ppds:0/ppd/openprinting/Lexmark/Lexmark_MS520_Series.ppd
+
+5>cat /tmp/printer.list| while read Printer Driver;do echo "  - Printer : $Printer" ;echo "    Driver : $Driver";done
+
+
+6> copy the output into printer.yml
+
+7> ansible-playbook -i ./list printer -k
+
+
+unlink /var/spool/cron
+
+caimge.synnex.org
+
+link -s  /var/spool/cron_standby /var/spool/cron
+Fre 10.88.126.135
+ASH 10.224.57.141
+
+
+
+
+
+10> (ASH) dont stop lsync on caimge.synnex.com
+     check the  /var/log/lrsyns.log
+     unlnk /var/spool/cron
+     ln -s /var/spool/crontabs_prod  ./cron (ansible common out for prod/standby)
+     
+
+21> 
+ansible all  -i  .. -m -a "systemctl disable--now crond.service". 
+10.88.126.86
+10.88.126.85
+10.88.126.84
+10.88.126.83
+10.88.126.87
+10.88.126.244
+10.88.127.92
+10.88.176.150
+10.88.126.217
+10.88.127.91
+10.88.126.246
+10.88.176.112
+10.88.176.152
+10.88.126.160
+
+
+33> Permission of 
+
+
+cis/bigdata/cdc 
