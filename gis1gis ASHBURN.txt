@@ -1,0 +1,66 @@
+gis1/gis ASHBURN
+stop crond.
+link check
+kill - cronjob
+
+-----------------------------------
+crontab stop
+
+pkill -u  
+other then root,atas,
+
+sw link
+
+
+
+2>cronto ashburn
+
+sw 
+
+
+-------------------------
+1> crond.service stop
+2> sw link
+3> disable crond.serivce
+root
+atas
+
+
+10.84.126.230
+rsync from 10.88.126.140
+lsync to  10.224.59.191
+
+Edi Precke
+pre sync allsync with standbyserver
+
+Init cuv from Fre to 
+3,4,8,
+
+32, ASHBRUN/FREMONT GIS/CPU_Limits. 
+71,
+
+74
+sudo  -u weblogic  /webapp/cron_monitor/checkSpool.sh
+75.76
+77
+79
+
+
+
+
+
+before 63 sw link. link_sync. 
+
+66/67 > change to var to prod and standarby inventory list.
+
+
+
+
+8> 
+cron/cron-uat
+stop service
+pkill -u 
+sw cron  link
+
+9> 
+link sw cron
